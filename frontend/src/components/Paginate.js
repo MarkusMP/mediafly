@@ -2,7 +2,9 @@ import React from "react";
 import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-const Paginate = ({ pages, page, keyword = "" }) => {
+const Paginate = ({ data, keyword = "" }) => {
+  const { pages, page } = data;
+
   return (
     pages > 1 && (
       <Pagination className="ml-5">

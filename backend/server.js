@@ -36,7 +36,7 @@ app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server have started in ${process.env.NODE_ENV} mode on ${PORT}`);

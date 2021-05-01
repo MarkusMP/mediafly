@@ -13,9 +13,11 @@ const HomePage = ({ match }) => {
     <Container>
       <CreateSocialCard />
       <SocialCardList pageNumber={match.params.pageNumber} />
-      <div className="mt-5">
-        <Paginate data={posts.posts} />
-      </div>
+      {posts && (
+        <div className="mt-5">
+          <Paginate data={posts.posts} />
+        </div>
+      )}
     </Container>
   );
 };
